@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#FFFFFF">
+
+
+    <ImageView
+        android:id="@+id/contact_image"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/contact_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="false" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:gravity="center_vertical"
+        android:text=" SUJITH SHIVAPRAKASH"
+        android:layout_toRightOf="@+id/contact_image"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:gravity="center_vertical"
+
+        android:visibility="gone"
+        android:textColor="#000000" />
+
+    <ImageButton
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/phone_icon"
+        android:background="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/contact_name"
+        android:layout_toEndOf="@+id/contact_name" />
+
+    <ImageButton
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/message_icon"
+        android:background="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/phone"
+        android:layout_toEndOf="@+id/phone"
+        android:outlineProvider="none"
+        android:nestedScrollingEnabled="false"
+        android:cropToPadding="true"
+        android:adjustViewBounds="false" />
+
+
+</RelativeLayout>
+
+

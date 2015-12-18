@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="COOKING HELP"
+            android:id="@+id/textView6"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1:14"
+            android:id="@+id/chore_time"
+            android:layout_gravity="left|bottom"
+            android:textColor="#000000"
+            android:layout_marginLeft="25px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="1/11/2015"
+            android:id="@+id/chore_date"
+            android:layout_weight="0.01"
+            android:layout_marginLeft="25px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:id="@+id/chore_description">
+
+        <ImageButton
+            android:layout_width="57dp"
+            android:layout_height="31dp"
+            android:id="@+id/accept_button"
+            android:layout_gravity="right"
+            android:layout_weight="0.02"
+            android:src="@mipmap/accept"
+            style="@android:style/Holo.Light.ButtonBar"
+            android:layout_marginTop="20px" />
+
+        <TextView
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="notify"
+            android:id="@+id/notify"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageButton
+            android:layout_width="58dp"
+            android:layout_height="34dp"
+            android:id="@+id/ignore_button"
+            android:layout_gravity="right"
+            android:layout_weight="0.02"
+            android:src="@mipmap/ignore"
+            style="@android:style/Holo.Light.ButtonBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/chore_activity_track_id"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="MESSAGE:"
+            android:id="@+id/textView7"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/chore_message"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.02" />
+    </LinearLayout>
+
+</RelativeLayout>

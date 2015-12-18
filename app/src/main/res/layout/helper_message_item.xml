@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="COOKING HELP"
+            android:id="@+id/chore_description"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1:14"
+            android:id="@+id/chore_time"
+            android:layout_gravity="left|bottom"
+            android:textColor="#000000"
+            android:layout_marginLeft="25px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="1/11/2015"
+            android:id="@+id/chore_date"
+            android:layout_weight="0.01"
+            android:layout_marginLeft="25px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:id="@+id/layout1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="notify"
+            android:id="@+id/notify"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100px" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPanel"
+            android:layout_gravity="right"
+            android:layout_marginTop="100px">
+
+            <ImageButton
+                android:layout_width="57dp"
+                android:layout_height="31dp"
+                android:id="@+id/accept_button"
+                android:layout_gravity="right"
+                android:layout_weight="0.02"
+                android:src="@mipmap/accept"
+                style="@android:style/Holo.Light.ButtonBar"
+                android:layout_marginTop="25px" />
+
+            <ImageButton
+                android:layout_width="58dp"
+                android:layout_height="34dp"
+                android:id="@+id/ignore_button"
+                android:layout_gravity="right"
+                android:layout_weight="0.02"
+                android:src="@mipmap/ignore"
+                style="@android:style/Holo.Light.ButtonBar"
+                android:layout_marginTop="35px" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/chore_activity_track_id"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="MESSAGE:"
+            android:id="@+id/textView7"
+            android:layout_weight="0.01"
+            android:layout_marginTop="40px"
+            android:layout_gravity="bottom|center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/chore_message"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_weight="0.02"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:weightSum="1"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/textPanel">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="130px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="30/10/2015"
+                    android:id="@+id/chore_date"
+                    android:layout_marginLeft="25px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="23:37"
+                    android:id="@+id/chore_time"
+                    android:layout_marginLeft="25px"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.89">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Medium Text"
+                    android:id="@+id/chore_description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/notify" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:id="@+id/chore_activity_track_id"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:id="@+id/buttonPanel"
+                android:weightSum="1">
+
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/accept_button"
+                    android:src="@mipmap/accept"
+                    android:background="#ffffff"
+                    android:cropToPadding="false"
+                    android:contextClickable="false" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ignore_button"
+                    android:src="@mipmap/ignore"
+                    style="@android:style/Holo.ButtonBar" />
+
+            </LinearLayout>-->
+
+    <!-- <ViewSwitcher
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/viewSwitcher"
+         android:layout_gravity="center">-->
+
+    <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="You have ignored this message."
+            android:id="@+id/ignoreText"
+            android:visibility="gone"/>-->
+
+    <!-- </ViewSwitcher>-->
+
+    <!--</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Message:"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/chore_message"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="25px"/>
+    </LinearLayout> -->

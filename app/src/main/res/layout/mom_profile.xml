@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="1000px"
+    android:weightSum="1"
+    android:background="@color/windowBackground">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_weight="0.30"
+        android:background="#ffffff"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="280px"
+            android:layout_height="match_parent"
+            android:id="@+id/mom_image"
+            android:src="@mipmap/contact_image"
+            android:layout_weight="0.92" />
+
+        <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:id="@+id/mom_phone"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/mompage_phone_button"
+            style="@android:style/Holo.Light.ButtonBar"
+            android:layout_marginBottom="35px"
+            android:layout_marginRight="-30px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Jane Smith"
+            android:id="@+id/mom_name"
+            android:layout_weight="0.06"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="250px"
+            android:layout_marginRight="-80px"
+            android:textColor="@color/colorPrimary"
+            android:textSize="60px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Jane Smith"
+            android:id="@+id/mom_phone_number"
+            android:layout_weight="0.06"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="250px"
+            android:layout_marginRight="-80px"
+            android:textColor="@color/colorPrimary"
+            android:textSize="60px"
+            android:visibility="gone"/>
+
+
+        <ImageButton
+            style="@android:style/Holo.Light.ButtonBar"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:id="@+id/mom_message"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/mompage_message_icon"
+            android:layout_marginBottom="25px"
+            android:layout_marginRight="20px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_weight="0.02"
+        android:layout_marginTop="100px"
+        android:background="#FFFFFF"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="720S College Mall Road, Bloomington, Indiana "
+            android:id="@+id/mom_address"
+            android:layout_weight="0.02"
+            android:textColor="#0d0d0d"
+            android:textSize="38px"
+            android:layout_marginTop="30px"
+            android:layout_marginLeft="20px" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_marginLeft="160px"
+            android:src="@mipmap/mom_map"
+            style="@android:style/Holo.Light.ButtonBar" />
+
+        <TextView
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Show on Map"
+            android:id="@+id/maptext"
+            android:textColor="#0d0d0d"
+            android:textSize="38px"
+            android:layout_marginTop="30px" />
+    </LinearLayout>
+
+</LinearLayout>

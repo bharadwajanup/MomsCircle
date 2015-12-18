@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.androidhive.materialtabs.fragments.OneFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="450px"
+            android:layout_height="match_parent"
+            android:id="@+id/container1"
+            android:weightSum="1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Date"
+                    android:layout_marginLeft="25px"
+                    android:id="@+id/chore_date" />
+
+               <Space
+                    android:layout_width="114dp"
+                    android:layout_height="60px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="SHOPPING HELP"
+                    android:id="@+id/chore_name_waiting"
+                    android:layout_marginLeft="25px"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/chore_time_waiting"
+                    android:layout_marginLeft="25px"
+                    android:textColor="#9e9e9e"
+                    android:textColorHighlight="#9e9e9e" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
