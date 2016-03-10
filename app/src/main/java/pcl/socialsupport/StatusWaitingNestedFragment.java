@@ -48,7 +48,7 @@ public class StatusWaitingNestedFragment extends Fragment{
         Uri.Builder builder = new Uri.Builder();
         builder.scheme(getString(R.string.protocol))
                 .authority(getString(R.string.server_ip))
-                .appendPath(getString(R.string.pathname))
+                .appendEncodedPath(getString(R.string.pathname))
                 .appendPath(server_script)
                 .appendQueryParameter("user_id",getString(R.string.user_id))
                 .appendQueryParameter("type","W");

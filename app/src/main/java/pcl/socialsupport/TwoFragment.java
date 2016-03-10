@@ -123,7 +123,7 @@ public class TwoFragment extends Fragment implements View.OnClickListener{
 
                     builder.scheme(getContext().getString(R.string.protocol))
                             .authority(getContext().getString(R.string.server_ip))
-                            .appendPath(getContext().getString(R.string.pathname))
+                            .appendEncodedPath(getContext().getString(R.string.pathname))
                             .appendEncodedPath(userImage);
 
 

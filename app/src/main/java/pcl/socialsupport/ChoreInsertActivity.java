@@ -111,7 +111,7 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
         Uri.Builder builder = new Uri.Builder();
         builder.scheme(proto)
                 .authority(host)
-                .appendPath(server_path)
+                .appendEncodedPath(server_path)
                 .appendPath(fileName)
                 .appendQueryParameter("user_id","1")
                 .appendQueryParameter("chore_id", chore_id)

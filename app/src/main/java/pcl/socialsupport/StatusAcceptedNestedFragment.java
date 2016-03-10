@@ -19,7 +19,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 
 import pcl.socialsupport.Utils.AcceptListItem;
@@ -49,8 +48,8 @@ public class StatusAcceptedNestedFragment extends Fragment{
 
         builder.scheme(getString(R.string.protocol))
                 .authority(getString(R.string.server_ip))
-                .appendPath(getString(R.string.pathname))
-                .appendPath(server_script)
+                .appendEncodedPath(getString(R.string.pathname))
+                .appendEncodedPath(server_script)
                 .appendQueryParameter("user_id", getString(R.string.user_id))
                 .appendQueryParameter("type","A");
 
