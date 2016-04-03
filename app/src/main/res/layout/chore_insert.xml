@@ -97,7 +97,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="111dp"
             android:layout_below="@+id/linearLayout"
             android:layout_alignParentLeft="true"
@@ -114,12 +114,25 @@
                 android:textColor="#000000"
                 android:gravity="center_horizontal" />
 
-            <TimePicker
-                android:layout_width="wrap_content"
-                android:layout_height="102dp"
-                android:id="@+id/time"
-                android:layout_gravity="center"
-                android:outlineProvider="paddedBounds" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/time_display" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pick Time"
+                    android:onClick="showTimePickerDialog" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -142,11 +155,26 @@
                 android:textSize="20dp"
                 android:textColor="#000000" />
 
-            <DatePicker
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="102dp"
-                android:id="@+id/date"
-                android:calendarViewShown="false" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/date_display" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pick date"
+                    android:onClick="showDatePickerDialog" />
+            </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"

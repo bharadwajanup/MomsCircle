@@ -4,6 +4,7 @@ package pcl.socialsupport;
  * Created by Anup on 11/9/2015.
  */
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -21,6 +22,9 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 import pcl.socialsupport.Utils.GetServerResponse;
 
 public class ChoreInsertActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,6 +34,8 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
     TextView message;
     DatePicker date;
     TimePicker time;
+    TextView dateDisplay;
+    TextView timeDisplay;
     String url = "";
     String host = "192.168.0.108";
     String server_path = "saware";
@@ -46,8 +52,8 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.chore_insert);
         submit=(Button) findViewById(R.id.submit);
         message=(TextView) findViewById(R.id.message);
-        date=(DatePicker) findViewById(R.id.date);
-        time=(TimePicker) findViewById(R.id.time);
+       // date=(DatePicker) findViewById(R.id.date);
+      //  time=(TimePicker) findViewById(R.id.time);
         host = getString(R.string.server_ip);
         server_path = getString(R.string.pathname);
 
@@ -55,6 +61,27 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
 
         title =  getIntent().getExtras().get("name").toString();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        dateDisplay = (TextView) findViewById(R.id.date_display);
+        timeDisplay = (TextView) findViewById(R.id.time_display);
+
+
+        final Calendar c = Calendar.getInstance();
+        int hour = c.get(Calendar.HOUR_OF_DAY);
+        String dayOfWeek = c.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+        int minute = c.get(Calendar.MINUTE);
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int day = c.get(Calendar.DAY_OF_MONTH);
+
+        String time = hour + ":" + (minute>10?minute:"0"+minute);
+        String date = dayOfWeek+"," +" " + month+"/"+day+"/"+year;
+
+
+        timeDisplay.setText(time);
+        dateDisplay.setText(date);
+
+
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -92,7 +119,7 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         String optionsValue = "";
 
-        int day = date.getDayOfMonth();
+        /*int day = date.getDayOfMonth();
         int month = date.getMonth();
         int year = date.getYear();
 
@@ -102,10 +129,10 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
 
         String timeValue = hour + ":" + min;
 
+*/
 
-
-        String user_id = "1";
-        String options = "date="+dateValue+"|time="+timeValue;
+        String user_id = getResources().getString(R.string.user_id);
+        String options = "date="+dateDisplay.getText()+"|time="+timeDisplay.getText();
         String msg = message.getText().toString();
 
         Uri.Builder builder = new Uri.Builder();
@@ -126,6 +153,18 @@ public class ChoreInsertActivity extends AppCompatActivity implements View.OnCli
         startActivity(intent);
 
 
+    }
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment(timeDisplay);
+        //newFragment.show(getSupportFragmentManager(), "timePicker");
+
+        newFragment.show(getFragmentManager(),"Time Picker");
+    }
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment(dateDisplay);
+        newFragment.show(getFragmentManager(), "datePicker");
     }
 
     public boolean isConnected()
